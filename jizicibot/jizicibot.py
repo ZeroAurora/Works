@@ -46,7 +46,7 @@ def scheduler():
     schedule.every().day.at("00:00").do(asyncio.run, twelve())
     while not exit_event.is_set():
         schedule.run_pending()
-        sleep(1)
+        sleep(5)
 
 
 @bot.server_app.before_serving

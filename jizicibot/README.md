@@ -1,6 +1,15 @@
 # Jizici Bot（a.k.a. 夕立仿制机）
 
-继承 Jizici 群里的原 Bot“夕立原型机”的功能，用（肯定不是）最小化的代码做到报时和怼人的功能。
+继承 Jizici 群里的原 Bot“夕立原型机”的功能，用 **一点也不轻量化** 的代码做到报时和怼人的功能。
+
+## 运行
+
+自行初始化虚拟环境、安装依赖且创建 `config.py`，然后
+
+```bash
+JIZICI_ENV=PRODUCTION python jizicibot.py
+
+```
 
 ## Licence
 

@@ -43,7 +43,7 @@ async def twelve():
 
 
 def scheduler():
-    schedule.every().minute.do(asyncio.run, twelve())
+    schedule.every().day.at("00:00").do(asyncio.run, twelve())
     while not exit_event.is_set():
         schedule.run_pending()
         sleep(1)

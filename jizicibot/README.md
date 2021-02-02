@@ -16,4 +16,4 @@ Bot 界似乎普遍都在 **强制性** 地使用 AGPL，因为现存的 QQ Bot 
 
 当然这并不意味着我鼓励 Bot 不开源。我只是希望说明一下我为什么把这个 Bot 用这个奇奇怪怪的许可证开放出来，顺便纠正一些误解 :)
 
-Ref: https://opensource.stackexchange.com/a/4086
+Ref: https://opensource.stackexchange.com/q/4083

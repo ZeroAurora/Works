@@ -2,7 +2,7 @@
 
 from pathlib import Path
 import json
-from zipfile import  ZipFile
+from zipfile import ZipFile
 
 
 DEFAULT_CHART_INFO = {
@@ -36,7 +36,9 @@ for level in levels:
             chart_path = json.load(level_spec)["charts"][0]["path"] # type: str
         chart_id = str(chart_path.split(".")[0])
         zip.extract(chart_path, out_path)
-        cyl["ChartInfos"].append(DEFAULT_CHART_INFO | {"FileName": chart_path, "Diff": chart_id})
+        cyl["ChartInfos"].append(
+            DEFAULT_CHART_INFO | {"FileName": chart_path, "Diff": chart_id}
+        )
         print("Procceed {}.".format(chart_path))
 
 with open(out_path / "CylheimProject.cyl", "w") as cyl_file:

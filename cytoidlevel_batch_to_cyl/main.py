@@ -30,12 +30,11 @@ with ZipFile(levels[0]) as std_level:
     std_level.extract(DEFAULT_CHART_INFO["Bg"], out_path)
     print("Procceed media files.")
 
-chart_id = 0
 for level in levels:
-    chart_id += 1
     with ZipFile(level) as zip:
         with zip.open("level.json") as level_spec:
-            chart_path = json.load(level_spec)["charts"][0]["path"]
+            chart_path = json.load(level_spec)["charts"][0]["path"] # type: str
+        chart_id = str(chart_path.split(".")[0])
         zip.extract(chart_path, out_path)
         cyl["ChartInfos"].append(DEFAULT_CHART_INFO | {"FileName": chart_path, "Diff": chart_id})
         print("Procceed {}.".format(chart_path))
